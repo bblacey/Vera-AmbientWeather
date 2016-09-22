@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation>
+	<functions>
+        local p
+        local u
+        local m
+
+        function startup(lul_device)
+            luup.log("AmbientWeather: Loading plugin L_AmbientWeather1 ...")
+            if (package.path:find ("/etc/cmh-ludl/?.lua;/etc/cmh-lu/?.lua", 1, true) == nil) then
+                package.path = package.path .. ";/etc/cmh-ludl/?.lua;/etc/cmh-lu/?.lua"
+            end
+
+            package.loaded.L_AmbientWeather1 = nil
+            p = require("L_AmbientWeather1")
+            if (package.loaded.L_AmbientWeather1 == nil)
+            then
+                luup.log("AmbientWeather: Plugin is not installed correctly. L_AmbientWeather.lua cannot be loaded.", 1)
+                luup.task("Plugin not correctly installed", 2, "AmbientWeather plugin", -1)
+                return false
+            end
+            luup.log("AmbientWeather: Plugin module L_AmbientWeather1 loaded")
+
+            return p.init(lul_device)
+        end
+	</functions>
+	<startup>startup</startup>
+</implementation>

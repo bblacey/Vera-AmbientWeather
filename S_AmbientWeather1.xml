@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<scpd>
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <serviceStateTable>
+    </serviceStateTable>
+</scpd>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+  <specVersion>
+    <major>1</major>
+    <minor>0</minor>
+  </specVersion>
+  <device>
+    <deviceType>urn:schemas-blacey-com:device:AW:1</deviceType>
+    <friendlyName>Ambient Weather Station</friendlyName>
+    <manufacturer>Ambient Weather</manufacturer>
+    <manufacturerURL>http://www.ambientweather.com</manufacturerURL>
+    <modelDescription>Weather Station 1200/1400-IP</modelDescription>
+    <modelName>beta</modelName>
+    <modelNumber>1</modelNumber>
+    <handleChildren>1</handleChildren>
+    <UDN></UDN>
+    <UPC></UPC>
+    <serviceList>
+	<service>
+		<serviceType>urn:schemas-blacey-com:service:AW:1</serviceType>
+		<serviceId>urn:blacey-com:serviceId:AW1</serviceId>
+		<SCPDURL>S_AmbientWeather1.xml</SCPDURL>
+	</service>
+	<service>
+		<serviceType>urn:schemas-upnp-org:service:TemperatureSensor:1</serviceType>
+		<serviceId>urn:upnp-org:serviceId:TemperatureSensor1</serviceId>
+		<SCPDURL>S_TemperatureSensor1.xml</SCPDURL>
+	</service>
+	<service>
+		<serviceType>urn:schemas-upnp-org:service:HumiditySensor:1</serviceType>
+		<serviceId>urn:upnp-org:serviceId:HumiditySensor1</serviceId>
+		<SCPDURL>S_HumiditySensor1.xml</SCPDURL>
+	</service>
+    </serviceList>
+    <staticJson>D_AmbientWeather1.json</staticJson>
+    <implementationList>
+      <implementationFile>I_AmbientWeather1.xml</implementationFile>
+    </implementationList>
+  </device>
+</root>

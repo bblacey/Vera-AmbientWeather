@@ -1,0 +1,159 @@
+{
+	"flashicon":"http://site.ambientweatherstore.com/favicon.ico",
+	"doc_url":{
+		"doc_language":1,
+		"doc_manual":1,
+		"doc_version":1,
+		"doc_platform":0,
+		"doc_page":"sensors"
+	},
+	"Tabs":[
+        {
+            "Label": {
+                "lang_tag": "aw_tabname_control",
+                "text": "Settings"
+            },
+            "Position": "0",
+            "TabType": "flash",
+            "SceneGroup": [
+                {
+                    "id": "1",
+                    "top": "0",
+                    "left": "0",
+                    "x": "1",
+                    "y": "2"
+                }
+            ],
+            "ControlGroup": [
+                {
+                    "id": "1",
+                    "scenegroup": "1"
+                }
+            ],
+            "Control": [
+                {
+                    "ControlGroup": "2",
+                    "ControlType": "label",
+                    "text_align": "left",
+                    "top": "1",
+                    "left": "-0.2",
+                    "x": "2",
+                    "y": "1",
+                    "Label": {
+                        "lang_tag": "observerIP",
+                        "text": "Observer IP:"
+                    },
+                    "Display": {
+                        "Top": 15,
+                        "Left": 25,
+                        "Width": 75,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "2",
+                    "ControlType": "variable",
+                    "text_align": "left",
+                    "top": "1",
+                    "left": "0.9",
+                    "x": "2",
+                    "y": "1",
+                    "Display": {
+                        "Service": "urn:blacey-com:serviceId:AW1",
+                        "Variable": "AmbientObserverIP",
+                        "Value": "1",
+                        "Top": 15,
+                        "Left": 135,
+                        "Width": 75,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "2",
+                    "ControlType": "label",
+                    "text_align": "left",
+                    "top": "1.8",
+                    "left": "-0.2",
+                    "x": "2",
+                    "y": "1",
+                    "Label": {
+                        "lang_tag": "interval",
+                        "text": "Interval:"
+                    },
+                    "Display": {
+                        "Top": 45,
+                        "Left": 25,
+                        "Width": 75,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "2",
+                    "ControlType": "variable",
+                    "text_align": "left",
+                    "top": "1.8",
+                    "left": "0.9",
+                    "x": "2",
+                    "y": "1",
+                    "Display": {
+                        "Service": "urn:blacey-com:serviceId:AW1",
+                        "Variable": "RefreshInterval",
+                        "Value": "1",
+                        "Top": 45,
+                        "Left": 135,
+                        "Width": 75,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "2",
+                    "ControlType": "label",
+                    "text_align": "left",
+                    "top": "1.8",
+                    "left": "-0.2",
+                    "x": "2",
+                    "y": "1",
+                    "Label": {
+                        "lang_tag": "numSamples",
+                        "text": "AVG Samples:"
+                    },
+                    "Display": {
+                        "Top": 75,
+                        "Left": 25,
+                        "Width": 75,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "2",
+                    "ControlType": "variable",
+                    "text_align": "left",
+                    "top": "1.8",
+                    "left": "0.9",
+                    "x": "2",
+                    "y": "1",
+                    "Display": {
+                        "Service": "urn:blacey-com:serviceId:AW1",
+                        "Variable": "NumAvgSamples",
+                        "Value": "1",
+                        "Top": 75,
+                        "Left": 135,
+                        "Width": 75,
+                        "Height": 20
+                    }
+                }
+            ]
+        },
+		{
+			"Label":{
+				"lang_tag":"advanced",
+				"text":"Advanced"
+			},
+			"Position":"3",
+			"TabType":"javascript",
+			"ScriptName":"shared.js",
+			"Function":"advanced_device"
+		}
+	],
+	"DeviceType":"urn:schemas-blacey-com:device:AW:1"
+}
